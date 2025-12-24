@@ -54,3 +54,12 @@ func Edit(id int, title string) error {
 	list.Edit(id, title)
 	return Save(list)
 }
+
+func AddSubTask(taskID int, title string) error {
+	list, err := Load()
+	if err != nil {
+		return err
+	}
+	list.AddSubTask(taskID, title)
+	return Save(list)
+}
