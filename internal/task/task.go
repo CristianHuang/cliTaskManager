@@ -29,3 +29,13 @@ func (l *List) Complete(id int) bool {
 	}
 	return false
 }
+
+func (l *List) Delete(id int) bool {
+	for i, t := range *l {
+		if t.ID == id {
+			*l = append((*l)[:i], (*l)[i+1:]...)
+			return true
+		}
+	}
+	return false
+}

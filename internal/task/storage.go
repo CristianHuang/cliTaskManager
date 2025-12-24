@@ -36,3 +36,12 @@ func Save(list List) error {
 
 	return os.WriteFile(fileName, data, 0644)
 }
+
+func Delete(id int) error {
+	list, err := Load()
+	if err != nil {
+		return err
+	}
+	list.Delete(id)
+	return Save(list)
+}

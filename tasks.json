@@ -1,12 +1,7 @@
 [
 	{
-		"id": 1,
-		"title": "Comprar pan",
-		"done": true
-	},
-	{
 		"id": 2,
-		"title": "Crear video para el jueves",
+		"title": "Crear licence",
 		"done": true
 	}
 ]
