@@ -39,3 +39,13 @@ func (l *List) Delete(id int) bool {
 	}
 	return false
 }
+
+func (l *List) Edit(id int, title string) bool {
+	for i, t := range *l {
+		if t.ID == id {
+			(*l)[i].Title = title
+			return true
+		}
+	}
+	return false
+}

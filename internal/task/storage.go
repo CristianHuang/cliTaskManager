@@ -45,3 +45,12 @@ func Delete(id int) error {
 	list.Delete(id)
 	return Save(list)
 }
+
+func Edit(id int, title string) error {
+	list, err := Load()
+	if err != nil {
+		return err
+	}
+	list.Edit(id, title)
+	return Save(list)
+}
